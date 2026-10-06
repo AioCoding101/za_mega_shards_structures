@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "za_mega_shards:block/mega_research_station"
+    },
+    "facing=east": {
+      "model": "za_mega_shards:block/mega_research_station",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "za_mega_shards:block/mega_research_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "za_mega_shards:block/mega_research_station",
+      "y": 270
+    }
+  }
+}

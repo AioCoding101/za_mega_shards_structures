@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "za_mega_shards",
+  "version": "${version}",
+  "name": "ZA Mega Shards",
+  "description": "A Mega Showdown side mod adding renewable Mega Shards and a Mega Research Station economy.",
+  "authors": [
+    "Lvnatic"
+  ],
+  "license": "Lvnatic's General license",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.lvantic.za_mega_shards.fabric.ZAMegaShardsFabric"
+    ]
+  },
+  "depends": {
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "cobblemon": ">=1.8.1",
+    "mega_showdown": ">=1.2.0+1.8.1+1.21.1-release"
+  }
+}

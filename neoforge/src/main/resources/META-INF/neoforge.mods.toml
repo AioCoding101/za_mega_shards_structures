@@ -1,0 +1,44 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+license = "Lvnatic's General license"
+
+[[mods]]
+modId = "za_mega_shards"
+version = "${version}"
+displayName = "ZA Mega Shards"
+authors = "Lvnatic"
+description = '''
+A Mega Showdown side mod adding renewable Mega Shards and a Mega Research Station economy.
+'''
+
+[[dependencies.za_mega_shards]]
+modId = "neoforge"
+type = "required"
+reason = "Update your Neoforge version!"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.za_mega_shards]]
+modId = "minecraft"
+type = "required"
+reason = "HOW did you even manage to open Minecraft without Minecraft?"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.za_mega_shards]]
+modId = "cobblemon"
+type = "required"
+reason = "You're missing like the most important mod for this to work. Install/Update it!"
+versionRange = "[1.8.1, )"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.za_mega_shards]]
+modId = "mega_showdown"
+type = "required"
+reason = "You're missing like the second most important mod for this to work. Install/Update it!"
+versionRange = "[1.2.0+1.8.1+1.21.1-release,)"
+ordering = "AFTER"
+side = "BOTH"

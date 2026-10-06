@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "za_mega_shards:item/mega_shard"
+  }
+}

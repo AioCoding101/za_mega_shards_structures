@@ -251,8 +251,26 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
                     pos,
                     SoundEvents.AMETHYST_BLOCK_CHIME,
                     SoundSource.BLOCKS,
-                    0.8F,
+                    2.0F,
+                    0.85F
+            );
+
+            level.playSound(
+                    null,
+                    pos,
+                    SoundEvents.AMETHYST_BLOCK_CHIME,
+                    SoundSource.BLOCKS,
+                    2.0F,
                     1.15F
+            );
+
+            level.playSound(
+                    null,
+                    pos,
+                    SoundEvents.AMETHYST_BLOCK_BREAK,
+                    SoundSource.BLOCKS,
+                    1.0F,
+                    1.05F
             );
 
             if (level instanceof ServerLevel serverLevel) {

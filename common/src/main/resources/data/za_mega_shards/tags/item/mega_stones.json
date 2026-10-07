@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#za_mega_shards:mega_stone_tier_1",
+    "#za_mega_shards:mega_stone_tier_2",
+    "#za_mega_shards:mega_stone_tier_3",
+    "#za_mega_shards:mega_stone_tier_4",
+    "#za_mega_shards:mega_stone_tier_5"
+  ]
+}

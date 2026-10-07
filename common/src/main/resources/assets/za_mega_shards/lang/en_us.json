@@ -1,5 +1,15 @@
 {
   "block.za_mega_shards.mega_research_station": "Mega Research Station",
+
+  "container.za_mega_shards.mega_research_station": "Mega Research Station",
+
   "item.za_mega_shards.mega_shard": "Mega Shard",
-  "itemGroup.za_mega_shards": "ZA Mega Shards"
+  "itemGroup.za_mega_shards": "ZA Mega Shards",
+
+  "tag.item.za_mega_shards.mega_stones": "Mega Stones",
+  "tag.item.za_mega_shards.mega_stone_tier_1": "Tier 1 Mega Stones",
+  "tag.item.za_mega_shards.mega_stone_tier_2": "Tier 2 Mega Stones",
+  "tag.item.za_mega_shards.mega_stone_tier_3": "Tier 3 Mega Stones",
+  "tag.item.za_mega_shards.mega_stone_tier_4": "Tier 4 Mega Stones",
+  "tag.item.za_mega_shards.mega_stone_tier_5": "Tier 5 Mega Stones"
 }

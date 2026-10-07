@@ -1,0 +1,12 @@
+{
+  "feature": "za_mega_shards:mega_energy_deposit",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 7
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

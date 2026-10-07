@@ -2,6 +2,7 @@ package com.github.lvantic.za_mega_shards.fabric;
 
 import com.github.lvantic.za_mega_shards.ZAMegaShards;
 import com.github.lvantic.za_mega_shards.fabric.villager.ZAMSPointOfInterestTypesFabric;
+import com.github.lvantic.za_mega_shards.villager.ZAMSVillagerTrades;
 import net.fabricmc.api.ModInitializer;
 
 public final class ZAMegaShardsFabric implements ModInitializer {
@@ -11,5 +12,7 @@ public final class ZAMegaShardsFabric implements ModInitializer {
         ZAMegaShards.init();
 
         ZAMSPointOfInterestTypesFabric.register();
+
+        ZAMSVillagerTrades.register();
     }
 }

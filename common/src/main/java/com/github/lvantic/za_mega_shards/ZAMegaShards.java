@@ -5,6 +5,7 @@ import com.github.lvantic.za_mega_shards.block.ZAMSBlocks;
 import com.github.lvantic.za_mega_shards.item.ZAMSItems;
 import com.github.lvantic.za_mega_shards.itemGroup.ZAMSTabs;
 import com.github.lvantic.za_mega_shards.screen.ZAMSMenuTypes;
+import com.github.lvantic.za_mega_shards.villager.ZAMSVillagerProfessions;
 
 public final class ZAMegaShards {
 
@@ -19,5 +20,7 @@ public final class ZAMegaShards {
         ZAMSItems.register();
         ZAMSMenuTypes.register();
         ZAMSTabs.register();
+
+        ZAMSVillagerProfessions.register();
     }
 }

@@ -5,10 +5,10 @@ license = "Lvnatic's General license"
 [[mods]]
 modId = "za_mega_shards"
 version = "${version}"
-displayName = "ZA Mega Shards"
+displayName = "Cobblemon: ZA Mega Shards"
 authors = "Lvnatic"
 description = '''
-A Mega Showdown side mod adding renewable Mega Shards and a Mega Research Station economy.
+A Mega Showdown side mod adding renewable Mega Shards & a Mega Research Station.
 '''
 
 [[dependencies.za_mega_shards]]

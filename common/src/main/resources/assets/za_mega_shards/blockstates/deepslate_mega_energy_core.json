@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core"
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored"
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core",
+        "y": 180
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core",
+        "x": 90
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored",
+        "x": 90
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "za_mega_shards:block/deepslate_mega_energy_core_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

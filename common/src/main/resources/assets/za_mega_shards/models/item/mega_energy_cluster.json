@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "za_mega_shards:block/mega_energy_cluster"
+  }
+}

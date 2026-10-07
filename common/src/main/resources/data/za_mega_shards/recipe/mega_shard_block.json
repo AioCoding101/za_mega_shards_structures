@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "za_mega_shards:mega_shard_block"
+    }
+  ],
+  "result": {
+    "id": "za_mega_shards:mega_shard",
+    "count": 9
+  }
+}

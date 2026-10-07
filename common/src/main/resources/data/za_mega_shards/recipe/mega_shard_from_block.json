@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "za_mega_shards:mega_shard"
+    }
+  },
+  "result": {
+    "id": "za_mega_shards:mega_shard_block",
+    "count": 1
+  }
+}

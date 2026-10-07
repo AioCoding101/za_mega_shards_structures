@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "za_mega_shards:block/deepslate_mega_energy_core_top",
+    "side": "za_mega_shards:block/deepslate_mega_energy_core"
+  }
+}

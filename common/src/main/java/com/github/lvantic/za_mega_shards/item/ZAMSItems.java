@@ -10,6 +10,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public class ZAMSItems {
 
@@ -34,6 +35,62 @@ public class ZAMSItems {
                                     .arch$tab(ZAMSTabs.MAIN_TAB)
                     )
             );
+
+    public static final RegistrySupplier<Item> MEGA_SHARD_BLOCK =
+            registerBlockItem(
+                    "mega_shard_block",
+                    ZAMSBlocks.MEGA_SHARD_BLOCK
+            );
+
+    public static final RegistrySupplier<Item> MEGA_ENERGY_CORE =
+            registerBlockItem(
+                    "mega_energy_core",
+                    ZAMSBlocks.MEGA_ENERGY_CORE
+            );
+
+    public static final RegistrySupplier<Item> DEEPSLATE_MEGA_ENERGY_CORE =
+            registerBlockItem(
+                    "deepslate_mega_energy_core",
+                    ZAMSBlocks.DEEPSLATE_MEGA_ENERGY_CORE
+            );
+
+    public static final RegistrySupplier<Item> SMALL_MEGA_ENERGY_BUD =
+            registerBlockItem(
+                    "small_mega_energy_bud",
+                    ZAMSBlocks.SMALL_MEGA_ENERGY_BUD
+            );
+
+    public static final RegistrySupplier<Item> MEDIUM_MEGA_ENERGY_BUD =
+            registerBlockItem(
+                    "medium_mega_energy_bud",
+                    ZAMSBlocks.MEDIUM_MEGA_ENERGY_BUD
+            );
+
+    public static final RegistrySupplier<Item> LARGE_MEGA_ENERGY_BUD =
+            registerBlockItem(
+                    "large_mega_energy_bud",
+                    ZAMSBlocks.LARGE_MEGA_ENERGY_BUD
+            );
+
+    public static final RegistrySupplier<Item> MEGA_ENERGY_CLUSTER =
+            registerBlockItem(
+                    "mega_energy_cluster",
+                    ZAMSBlocks.MEGA_ENERGY_CLUSTER
+            );
+
+    private static RegistrySupplier<Item> registerBlockItem(
+            String name,
+            RegistrySupplier<Block> block
+    ) {
+        return ITEMS.register(
+                name,
+                () -> new BlockItem(
+                        block.get(),
+                        new Item.Properties()
+                                .arch$tab(ZAMSTabs.MAIN_TAB)
+                )
+        );
+    }
 
     public static void register() {
         ITEMS.register();

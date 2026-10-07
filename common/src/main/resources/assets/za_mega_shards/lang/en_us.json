@@ -1,5 +1,12 @@
 {
+  "block.za_mega_shards.deepslate_mega_energy_core": "Deepslate Mega Energy Core",
+  "block.za_mega_shards.large_mega_energy_bud": "Large Mega Energy Bud",
+  "block.za_mega_shards.mega_energy_cluster": "Mega Energy Cluster",
+  "block.za_mega_shards.mega_energy_core": "Mega Energy Core",
   "block.za_mega_shards.mega_research_station": "Mega Research Station",
+  "block.za_mega_shards.mega_shard_block": "Mega Shard Block",
+  "block.za_mega_shards.medium_mega_energy_bud": "Medium Mega Energy Bud",
+  "block.za_mega_shards.small_mega_energy_bud": "Small Mega Energy Bud",
 
   "container.za_mega_shards.mega_research_station": "Mega Research Station",
 

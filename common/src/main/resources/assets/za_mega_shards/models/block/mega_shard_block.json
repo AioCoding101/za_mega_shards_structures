@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "za_mega_shards:block/mega_shard_block"
+  }
+}

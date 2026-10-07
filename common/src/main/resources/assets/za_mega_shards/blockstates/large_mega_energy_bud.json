@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "za_mega_shards:block/large_mega_energy_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "za_mega_shards:block/large_mega_energy_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "za_mega_shards:block/large_mega_energy_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "za_mega_shards:block/large_mega_energy_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "za_mega_shards:block/large_mega_energy_bud"
+    },
+    "facing=west": {
+      "model": "za_mega_shards:block/large_mega_energy_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

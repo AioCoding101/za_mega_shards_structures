@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "za_mega_shards:block/large_mega_energy_bud"
+  }
+}

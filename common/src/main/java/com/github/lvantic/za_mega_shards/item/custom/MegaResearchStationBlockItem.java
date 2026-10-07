@@ -35,7 +35,7 @@ public class MegaResearchStationBlockItem extends BlockItem {
         tooltipComponents.add(
                 Component.translatable(
                         "tooltip.za_mega_shards.mega_research_station.2"
-                ).withStyle(ChatFormatting.DARK_GRAY)
+                ).withStyle(ChatFormatting.GRAY)
         );
 
         super.appendHoverText(

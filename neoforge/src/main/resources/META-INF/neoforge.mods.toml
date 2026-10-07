@@ -10,6 +10,7 @@ authors = "Lvnatic"
 description = '''
 A Mega Showdown side mod adding renewable Mega Shards & a Mega Research Station.
 '''
+logoFile = "assets/za_mega_shards/icon.png"
 
 [[dependencies.za_mega_shards]]
 modId = "neoforge"

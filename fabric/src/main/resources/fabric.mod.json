@@ -7,7 +7,11 @@
   "authors": [
     "Lvnatic"
   ],
+  "contact": {
+    "homepage": "https://github.com/Lvnatic-T/za_mega_shards"
+  },
   "license": "Lvnatic's General license",
+  "icon": "assets/za_mega_shards/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -22,5 +26,16 @@
     "java": ">=21",
     "cobblemon": ">=1.8.1",
     "mega_showdown": ">=1.2.0+1.8.1+1.21.1-release"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/za-mega-shards",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/za-mega-stones",
+        "modmenu.discord": "https://discord.gg/y7fXYrHkpV",
+        "modmenu.kofi": "https://ko-fi.com/allthemons",
+        "modmenu.source": "https://github.com/Lvnatic-T/za_mega_shards"
+      }
+    }
   }
 }

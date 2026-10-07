@@ -3,6 +3,8 @@ package com.github.lvantic.za_mega_shards.item;
 import com.github.lvantic.za_mega_shards.ZAMegaShards;
 import com.github.lvantic.za_mega_shards.block.ZAMSBlocks;
 import com.github.lvantic.za_mega_shards.itemGroup.ZAMSTabs;
+import com.github.lvantic.za_mega_shards.item.custom.MegaResearchStationBlockItem;
+import com.github.lvantic.za_mega_shards.item.custom.MegaShardItem;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -17,7 +19,7 @@ public class ZAMSItems {
     public static final RegistrySupplier<Item> MEGA_SHARD =
             ITEMS.register(
                     "mega_shard",
-                    () -> new Item(
+                    () -> new MegaShardItem(
                             new Item.Properties()
                                     .arch$tab(ZAMSTabs.MAIN_TAB)
                     )
@@ -26,7 +28,7 @@ public class ZAMSItems {
     public static final RegistrySupplier<Item> MEGA_RESEARCH_STATION =
             ITEMS.register(
                     "mega_research_station",
-                    () -> new BlockItem(
+                    () -> new MegaResearchStationBlockItem(
                             ZAMSBlocks.MEGA_RESEARCH_STATION.get(),
                             new Item.Properties()
                                     .arch$tab(ZAMSTabs.MAIN_TAB)

@@ -14,6 +14,10 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 
 public class MegaResearchStationMenu extends AbstractContainerMenu {
 
@@ -239,6 +243,32 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
         }
 
         this.inputContainer.setChanged();
+
+        this.access.execute((level, pos) -> {
+
+            level.playSound(
+                    null,
+                    pos,
+                    SoundEvents.AMETHYST_BLOCK_CHIME,
+                    SoundSource.BLOCKS,
+                    0.8F,
+                    1.15F
+            );
+
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(
+                        ParticleTypes.ELECTRIC_SPARK,
+                        pos.getX() + 0.5D,
+                        pos.getY() + 1.0D,
+                        pos.getZ() + 0.5D,
+                        8,
+                        0.25D,
+                        0.15D,
+                        0.25D,
+                        0.02D
+                );
+            }
+        });
 
         /*
          * If another Mega Stone remains in the stack,

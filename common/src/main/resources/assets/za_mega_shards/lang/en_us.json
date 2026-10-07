@@ -11,5 +11,9 @@
   "tag.item.za_mega_shards.mega_stone_tier_2": "Tier 2 Mega Stones",
   "tag.item.za_mega_shards.mega_stone_tier_3": "Tier 3 Mega Stones",
   "tag.item.za_mega_shards.mega_stone_tier_4": "Tier 4 Mega Stones",
-  "tag.item.za_mega_shards.mega_stone_tier_5": "Tier 5 Mega Stones"
+  "tag.item.za_mega_shards.mega_stone_tier_5": "Tier 5 Mega Stones",
+
+  "tooltip.za_mega_shards.mega_shard": "A mysterious Shard containing Mega Energy. It seems that some people collect these",
+  "tooltip.za_mega_shards.mega_research_station.1": "Disassembles Mega Stones into Shards",
+  "tooltip.za_mega_shards.mega_research_station.2": "Shard return depends on the Mega Stone's tier"
 }

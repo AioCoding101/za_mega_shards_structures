@@ -1,3 +1,4 @@
+
 package com.github.lvantic.za_mega_shards.block.custom;
 
 import com.github.lvantic.za_mega_shards.block.entity.MegaResearchStationBlockEntity;
@@ -10,6 +11,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -21,131 +23,84 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MegaResearchStationBlock extends Block implements EntityBlock {
 
-    public static final DirectionProperty FACING =
-            BlockStateProperties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
+    private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 2, 16, 18, 16);
+    private static final VoxelShape SHAPE_EAST = Block.box(0, 0, 0, 14, 18, 16);
+    private static final VoxelShape SHAPE_SOUTH = Block.box(0, 0, 0, 16, 18, 14);
+    private static final VoxelShape SHAPE_WEST = Block.box(2, 0, 0, 16, 18, 16);
 
     public MegaResearchStationBlock(Properties properties) {
         super(properties);
-
-        this.registerDefaultState(
-                this.stateDefinition.any()
-                        .setValue(FACING, Direction.NORTH)
-        );
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
     @Override
-    public @Nullable BlockState getStateForPlacement(
-            BlockPlaceContext context
-    ) {
-        return this.defaultBlockState()
-                .setValue(
-                        FACING,
-                        context.getHorizontalDirection().getOpposite()
-                );
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return switch (state.getValue(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case EAST -> SHAPE_EAST;
+            case SOUTH -> SHAPE_SOUTH;
+            case WEST -> SHAPE_WEST;
+            default -> SHAPE_NORTH;
+        };
     }
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(
-            BlockPos pos,
-            BlockState state
-    ) {
-        return new MegaResearchStationBlockEntity(
-                pos,
-                state
-        );
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     @Override
-    public InteractionResult useWithoutItem(
-            BlockState state,
-            Level level,
-            BlockPos pos,
-            Player player,
-            BlockHitResult hitResult
-    ) {
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new MegaResearchStationBlockEntity(pos, state);
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide) {
-            BlockEntity blockEntity =
-                    level.getBlockEntity(pos);
+            BlockEntity blockEntity = level.getBlockEntity(pos);
 
-            if (
-                    blockEntity instanceof MenuProvider menuProvider
-                            && player instanceof ServerPlayer serverPlayer
-            ) {
-                serverPlayer.openMenu(
-                        menuProvider
-                );
+            if (blockEntity instanceof MenuProvider menuProvider && player instanceof ServerPlayer serverPlayer) {
+                serverPlayer.openMenu(menuProvider);
             }
         }
 
-        return InteractionResult.sidedSuccess(
-                level.isClientSide
-        );
+        return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
     @Override
-    protected void onRemove(
-            BlockState state,
-            Level level,
-            BlockPos pos,
-            BlockState newState,
-            boolean movedByPiston
-    ) {
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
         if (!state.is(newState.getBlock())) {
-            BlockEntity blockEntity =
-                    level.getBlockEntity(pos);
+            BlockEntity blockEntity = level.getBlockEntity(pos);
 
             if (blockEntity instanceof Container container) {
-                Containers.dropContents(
-                        level,
-                        pos,
-                        container
-                );
+                Containers.dropContents(level, pos, container);
             }
         }
 
-        super.onRemove(
-                state,
-                level,
-                pos,
-                newState,
-                movedByPiston
-        );
+        super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
     @Override
-    protected @NotNull BlockState rotate(
-            BlockState state,
-            Rotation rotation
-    ) {
-        return state.setValue(
-                FACING,
-                rotation.rotate(
-                        state.getValue(FACING)
-                )
-        );
+    protected @NotNull BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
     @Override
-    protected @NotNull BlockState mirror(
-            BlockState state,
-            Mirror mirror
-    ) {
-        return state.rotate(
-                mirror.getRotation(
-                        state.getValue(FACING)
-                )
-        );
+    protected @NotNull BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override
-    protected void createBlockStateDefinition(
-            StateDefinition.Builder<Block, BlockState> builder
-    ) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 }

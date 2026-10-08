@@ -30,6 +30,7 @@ public class ZAMSBlocks {
                             BlockBehaviour.Properties.of()
                                     .mapColor(MapColor.COLOR_GRAY)
                                     .strength(3.5F)
+                                    .noOcclusion()
                                     .requiresCorrectToolForDrops()
                                     .sound(SoundType.METAL)
                     )

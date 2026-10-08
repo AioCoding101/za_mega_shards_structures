@@ -42,7 +42,7 @@ public class MegaResearchStationRenderer
 
         poseStack.pushPose();
 
-        poseStack.translate(0.5D, 0.59D, 0.5D);
+        poseStack.translate(0.5D, 0.1925D, 0.5D);
 
         Direction facing = blockEntity.getBlockState()
                 .getValue(MegaResearchStationBlock.FACING);
@@ -55,16 +55,9 @@ public class MegaResearchStationRenderer
             default -> 0.0F;
         };
 
-        poseStack.mulPose(
-                Axis.YP.rotationDegrees(rotation)
-        );
-
-        poseStack.translate(0.0D, 0.0D, 0.0D);
-
-        poseStack.mulPose(
-                Axis.XP.rotationDegrees(90.0F)
-        );
-
+        poseStack.mulPose(Axis.YP.rotationDegrees(rotation));
+        poseStack.translate(0.0D, 0.0D, -0.0625D);
+        poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
         poseStack.scale(0.4F, 0.4F, 0.4F);
 
         this.itemRenderer.renderStatic(

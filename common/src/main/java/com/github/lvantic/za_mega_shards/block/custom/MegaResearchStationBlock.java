@@ -32,10 +32,10 @@ public class MegaResearchStationBlock extends Block implements EntityBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 2, 16, 18, 16);
-    private static final VoxelShape SHAPE_EAST = Block.box(0, 0, 0, 14, 18, 16);
-    private static final VoxelShape SHAPE_SOUTH = Block.box(0, 0, 0, 16, 18, 14);
-    private static final VoxelShape SHAPE_WEST = Block.box(2, 0, 0, 16, 18, 16);
+    private static final VoxelShape SHAPE_NORTH = Block.box(4, 0, 3, 12, 12, 15);
+    private static final VoxelShape SHAPE_EAST = Block.box(1, 0, 4, 13, 12, 12);
+    private static final VoxelShape SHAPE_SOUTH = Block.box(4, 0, 1, 12, 12, 13);
+    private static final VoxelShape SHAPE_WEST = Block.box(3, 0, 4, 15, 12, 12);
 
     public MegaResearchStationBlock(Properties properties) {
         super(properties);
